@@ -39,10 +39,10 @@ export class Robot{
     GetNextSquare(): Point {
         switch(this.currentFacingDirection){
             case Direction.NORTH:{
-                return new Point(this.currentPoint.x, this.currentPoint.y + 1);
+                return new Point(this.currentPoint.x, this.currentPoint.y - 1);
             }
             case Direction.SOUTH:{
-                return new Point(this.currentPoint.x, this.currentPoint.y - 1);
+                return new Point(this.currentPoint.x, this.currentPoint.y + 1);
             }
             case Direction.EAST:{
                 return new Point(this.currentPoint.x + 1, this.currentPoint.y);

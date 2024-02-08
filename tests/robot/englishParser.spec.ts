@@ -30,7 +30,7 @@ describe("CommandStringIsValid", () => {
   });
 
   describe("ParseCommand", () => {
-    it("should return Rotate Right action", () => {
+    it("should return Move action", () => {
         const parser = new EnglishParser();
         const command = "F";
 

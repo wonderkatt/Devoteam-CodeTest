@@ -12,11 +12,11 @@ import { Action } from "./enums/actions";
 const inputManager = new InputManager();
 const run = true;
 while(run){
-    const mode = inputManager.QueryGameMode();
-
+    
     let board;
     let robot;
-
+    
+    const mode = inputManager.QueryGameMode();
     if(mode == Mode.square){
         board = new SquareBoard(5);
         robot = new Robot(new SwedishParser(), new Point(1,2))
@@ -36,7 +36,6 @@ while(run){
         commandString = inputManager.QueryCommandString();
 
     }while(!robot.CommandStringisValid(commandString))
-
 
     for (let i = 0; i < commandString.length; i++) {
         const action = robot.InputCommand(commandString[i]);
