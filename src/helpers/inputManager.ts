@@ -5,7 +5,7 @@ import promptSync from 'prompt-sync';
 export class InputManager {
     constructor() {}
 
-    QueryGameMode(): Mode {
+    GetGameModeFromInput(): Mode {
         const prompt = promptSync();
         let input;
         let run = true;
@@ -30,7 +30,7 @@ export class InputManager {
         }
     }
     
-    QueryCommandString(): string {
+    GetCommandStringFromInput(): string {
         const prompt = promptSync();
         console.log("Input command string\n")
         const input = prompt("input >> ");

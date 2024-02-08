@@ -16,7 +16,7 @@ while(run){
     let board;
     let robot;
     
-    const mode = inputManager.QueryGameMode();
+    const mode = inputManager.GetGameModeFromInput();
     if(mode == Mode.square){
         board = new SquareBoard(5);
         robot = new Robot(new SwedishParser(), new Point(1,2))
@@ -33,7 +33,7 @@ while(run){
 
     let commandString;
     do{
-        commandString = inputManager.QueryCommandString();
+        commandString = inputManager.GetCommandStringFromInput();
 
     }while(!robot.CommandStringisValid(commandString))
 
